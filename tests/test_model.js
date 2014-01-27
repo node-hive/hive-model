@@ -258,6 +258,7 @@ tap.test('make pk', function (t) {
 
 tap.test('update', function (t) {
 
+    debugger;
 	var updatMe = Model({
 		name: 'toUpdate', data: [
 			{id: 1, name: 'foo'} ,
@@ -269,6 +270,7 @@ tap.test('update', function (t) {
 		//console.log('updatMe index: %s', util.inspect(updatMe._index));
 		t.equal(updatMe.count(), 3);
 
+        debugger;
 		updatMe.get(1, function(err, record){
 			//console.log('got record ID: %s, %s ', util.inspect(err), util.inspect(record));
 			t.equal(record.id, 1);
